@@ -1,0 +1,20 @@
+<%= error_messages_for :actor %>
+
+<% form_for(:actor, :url => @actor.new_record? ? actors_path : actor_path(@actor), :html => { :method => @actor.new_record? ? :post : :put }) do |f| %>
+  <p>
+    <label for="actor_name">Name</label>
+    <%= f.text_field :name %>
+    <br />
+    
+    <label for="actor_creator">Creator</label>
+    <%= f.select :creator_id, User.find(:all).collect {|u| [u.name, u.id] } %>
+    <br />
+    
+    <label for="actor_active">Active?</label>
+    <%= f.check_box :active %>
+  </p>
+
+  <p>
+    <%= submit_tag @actor.new_record? ? "Create" : 'Update' %>
+  </p>
+<% end %>
