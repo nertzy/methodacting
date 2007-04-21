@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @actor.name %>
+</p>
+
+<p>
+  <b>Created on:</b>
+  <%=h @actor.created_on %>
+</p>
+
+<p>
+  <b>Updated on:</b>
+  <%=h @actor.updated_on %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @actor.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_actor_path(@actor) %> |
+<%= link_to 'Back', actors_path %>
