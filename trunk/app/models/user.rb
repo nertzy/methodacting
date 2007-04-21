@@ -11,4 +11,7 @@
 
 class User < ActiveRecord::Base
   has_many :actors, :foreign_key => 'creator_id'
+  validates_presence_of :name
+  validates_uniqueness_of :name
+  
 end
