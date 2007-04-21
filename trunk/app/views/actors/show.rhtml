@@ -1,21 +1,13 @@
+<h1><%=h @actor.name %> (<%=h @actor.type %>)</h1>
+
+<p>Created <%= distance_of_time_in_words_to_now @actor.created_on %> ago<%= " by #{link_to h(@actor.creator.name), user_path(@actor.creator)}" if @actor.creator %>.</p>
+
 <p>
-  <b>Name:</b>
-  <%=h @actor.name %>
+  Last updated <%= distance_of_time_in_words_to_now @actor.updated_on %> ago.
 </p>
 
 <p>
-  <b>Created on:</b>
-  <%=h @actor.created_on %>
-</p>
-
-<p>
-  <b>Updated on:</b>
-  <%=h @actor.updated_on %>
-</p>
-
-<p>
-  <b>Active:</b>
-  <%=h @actor.active %>
+  <%= @actor.active? ? 'Active' : 'Inactive' %>
 </p>
 
 
