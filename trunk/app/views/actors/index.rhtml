@@ -1,0 +1,26 @@
+<h1>Listing actors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Created on</th>
+    <th>Updated on</th>
+    <th>Active</th>
+  </tr>
+  
+<% for actor in @actors %>
+  <tr>
+    <td><%=h actor.name %></td>
+    <td><%=h actor.created_on %></td>
+    <td><%=h actor.updated_on %></td>
+    <td><%=h actor.active %></td>
+    <td><%= link_to 'Show', actor_path(actor) %></td>
+    <td><%= link_to 'Edit', edit_actor_path(actor) %></td>
+    <td><%= link_to 'Destroy', actor_path(actor), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New actor', new_actor_path %>
