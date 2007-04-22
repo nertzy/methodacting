@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<connections>
+  <connection>
+    <id type="integer">6</id>
+    <creator-id type="integer">1</creator-id>
+    <tag>Earmark</tag>
+    <source>6</source>
+    <target>4</target>
+    <description></description>
+  </connection>
+</connections>
+
