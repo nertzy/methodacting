@@ -12,15 +12,17 @@
 #
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+grant:
   id: 1
-  name: MyString
-  created_on: 2007-04-21
-  updated_on: 2007-04-21
-  active: false
-two:
+  name: Grant Hutchins
+  creator_id: 1
+  active: true
+inactive:
   id: 2
   name: MyString
-  created_on: 2007-04-21
-  updated_on: 2007-04-21
+  creator_id: 1
   active: false
+no_creator:
+  id: 3
+  name: Actor with no Creator
+  active: true
