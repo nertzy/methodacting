@@ -153,19 +153,31 @@ function selectInConnect()
 }
 
 
-function checkEnterAndSearchActor(e)
+function checkEnter(e)
 {
-  var keyCode
-  if(e && e.which)
+  var keyCode;
+  if ( e && e.which )
   {
-    keyCode = e.which
+    keyCode = e.which;
   }
   else
   {
-    keyCode = e.keyCode
+    // IE
+    keyCode = e.keyCode;
   }
 
-  if (keyCode == 13)
+  var result = false;
+  if ( keyCode == 13 )
+  {
+    result = true;
+  }
+  return result;
+}
+
+  
+function checkEnterAndSearchActor(e)
+{
+  if ( checkEnter(e) )
   {
     searchActor();
   }
@@ -174,7 +186,7 @@ function checkEnterAndSearchActor(e)
 
 function searchActor()
 {
-  searchActorName = document.getElementById("searchactorname").value
+  searchActorName = document.getElementById("searchactorname").value;
 
   // TODO: send request to backend
   request = "data/ActorList";
@@ -183,6 +195,7 @@ function searchActor()
   url = "foo.py";
   url = url + "?q=" + request;
   url = request + ".xml";  // for testing
+  alert(url)
   xmlHttp.open("GET", url, true);
   xmlHttp.send(null);
 }
@@ -238,6 +251,7 @@ function handleSearchActorList()
     for ( i = 0; i < actorList.length; i++ )
     {
       actorName = actorList[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+      alarm("check " + actorName + " against " + searchActorName);
       if ( actorName == searchActorName )
       {
         actorId = actorList[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
