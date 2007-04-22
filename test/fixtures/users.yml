@@ -10,13 +10,34 @@
 #
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+grant:
   id: 1
-  name: MyString
+  name: Grant Hutchins
   hashed_password: MyString
   salt: MyString
-two:
+james:
   id: 2
-  name: MyString
+  name: James Hogan
   hashed_password: MyString
   salt: MyString
+chrysta:
+  id: 3
+  name: Chrysta Hudson
+  hashed_password: MyString
+  salt: MyString
+tess:
+  id: 4
+  name: Tess Sneider
+  hashed_password: MyString
+  salt: MyString
+jason:
+  id: 5
+  name: Jason Maltzen
+  hashed_password: MyString
+  salt: MyString
+silona:
+  id: 6
+  name: Silona Bonewald
+  hashed_password: MyString
+  salt: MyString
+  

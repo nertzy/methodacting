@@ -26,7 +26,7 @@ class ActorsControllerTest < Test::Unit::TestCase
   
   def test_should_create_actor
     old_count = Actor.count
-    post :create, :actor => { }
+    post :create, :actor => { :name => 'Yoyodyne' }
     assert_equal old_count+1, Actor.count
     
     assert_redirected_to actor_path(assigns(:actor))

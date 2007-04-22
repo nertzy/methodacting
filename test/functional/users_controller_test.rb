@@ -26,7 +26,7 @@ class UsersControllerTest < Test::Unit::TestCase
   
   def test_should_create_user
     old_count = User.count
-    post :create, :user => { }
+    post :create, :user => { :name => 'Bob' }
     assert_equal old_count+1, User.count
     
     assert_redirected_to user_path(assigns(:user))
