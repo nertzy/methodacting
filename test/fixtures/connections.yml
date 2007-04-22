@@ -33,3 +33,10 @@ jason_friend_grant:
   creator_id: 5
   tag: Friend
   description: Jason thinks of Grant as a friend
+silona_leader_leauge:
+  id: 4
+  source_id: 6
+  target_id: 2
+  creator_id: 1
+  tag: Leader
+  description: Silona is the leader of the League of Technical Voters

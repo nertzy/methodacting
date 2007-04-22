@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :actors
   map.resources :connections
+  
+  map.connect 'connections/tag/:tag', :controller => 'connections', :action => 'tag'
 
   # The priority is based upon order of creation: first created -> highest priority.
   

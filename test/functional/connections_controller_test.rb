@@ -12,7 +12,9 @@ class ConnectionsControllerTest < Test::Unit::TestCase
   end
 
   # Replace this with your real tests.
-  def test_truth
-    assert true
+  def test_tag
+    get 'tag', :tag => 'Friend'
+    assert_response :success
+    assert_select 'ul.connections li', 2
   end
 end
