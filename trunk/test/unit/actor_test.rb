@@ -11,4 +11,21 @@ class ActorTest < Test::Unit::TestCase
     )
     assert !actor.valid?
   end
+  
+  def test_tag_is_possible
+    actor = Actor.new(
+      :name => 'No Such Tag',
+      :tag => 'FakeTag'
+    )
+    assert !actor.valid?
+  end
+  
+  def test_name_is_present
+    actor = Actor.new(
+      :name => '',
+      :tag => 'Individual'
+    )
+    assert !actor.valid?
+  end
+  
 end
