@@ -1,4 +1,6 @@
 class ConnectionsController < ApplicationController
+  XML_OPTIONS = {:except => [:source_id, :target_id], :methods => [:source_url, :target_url]}
+  
   # GET /connections
   # GET /connections.xml
   def index
@@ -6,7 +8,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       format.html # index.rhtml
-      format.xml  { render :xml => @connections.to_xml }
+      format.xml  { render :xml => @connections.to_xml(XML_OPTIONS) }
     end
   end
 
@@ -17,7 +19,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       format.html # show.rhtml
-      format.xml  { render :xml => @connection.to_xml }
+      format.xml  { render :xml => @connection.to_xml(XML_OPTIONS) }
     end
   end
 
@@ -89,7 +91,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       format.html # show.rhtml
-      format.xml  { render :xml => @connection.to_xml }
+      format.xml  { render :xml => @connection.to_xml(XML_OPTIONS) }
     end
   end
   
