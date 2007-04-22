@@ -4,7 +4,7 @@
   <p>
     <%= f.select :source_id, Actor.find(:all).collect { |a| [a.name, a.id] } %>
     is a 
-    <%= f.select :tag, Connection::CONNECTIONS %>
+    <%= f.select :tag, Connection::CONNECTIONS.map{|k,v| [k, k] } %>
     of 
     <%= f.select :target_id, Actor.find(:all).collect { |a| [a.name, a.id] }%>.
   </p>
