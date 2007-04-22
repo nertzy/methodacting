@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<connections>
+  <connection>
+    <id type="integer">15</id>
+    <creator-id type="integer">1</creator-id>
+    <tag>Beneficiary</tag>
+    <source>5</source>
+    <target>15</target>
+    <description></description>
+  </connection>
+</connections>
+
