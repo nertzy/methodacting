@@ -204,14 +204,7 @@ h6 {
 	font-size: 75%;
 }
 
-#earmark_list {
-	line-height: 180%;
+.connection_list {
+	line-height: 150%;
 }
 
-#sponsor_list {
-	line-height: 180%;
-}
-
-#related_list {
-	line-height: 180%;
-}

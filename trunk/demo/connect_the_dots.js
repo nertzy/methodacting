@@ -316,13 +316,14 @@ function addTagConnectionSection(table, prefix, tag, connections)
   img.src = "art/plus_button.jpg";
   img.alt = "Expand list";
   col.appendChild(img);
-  text = document.createTextNode(tag);
+  text = document.createTextNode(" " + tag);
   col.appendChild(text);
   row.appendChild(col);
   tbody.appendChild(row);
   row = document.createElement("tr");
   var div = document.createElement("div");
   div.setAttribute("id", prefix + tag + "_list");
+  div.setAttribute("class", "connection_list");
   col = document.createElement("td");
   col.appendChild(div);
   var i;
@@ -335,7 +336,7 @@ function addTagConnectionSection(table, prefix, tag, connections)
     actorId = connections[i].id
     name = connections[i].name
     href = document.createElement("a");
-    hrefText = document.createTextNode(name);
+    hrefText = document.createTextNode(" " + name);
     href.appendChild(hrefText);
     href.setAttribute("href", "#");
     href.setAttribute("onclick", "initActor(" + actorId + ");");
