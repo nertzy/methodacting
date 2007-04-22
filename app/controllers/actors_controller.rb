@@ -6,7 +6,7 @@ class ActorsController < ApplicationController
 
     respond_to do |format|
       format.html # index.rhtml
-      format.xml  { render :xml => @actors.to_xml(:except => [:creator_id]) }
+      format.xml  { render :xml => @actors.to_xml(:except => [:id, :creator_id], :methods => [:url]) }
     end
   end
 
