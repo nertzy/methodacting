@@ -1,7 +1,9 @@
 body { background-color: #fff; color: #333; }
 
+body.users{ background-color: #ccc;}
+
 body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Helvetica Neue", arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
 }
@@ -12,9 +14,18 @@ pre {
   font-size: 11px;
 }
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+td, th{
+  border:1px solid #ccc;
+  padding:3px;
+}
+
+a {  }
+a:visited {  }
+a:hover { }
+
+a.action {
+  font-size:80%;
+}
 
 .fieldWithErrors {
   padding: 2px;
