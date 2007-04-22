@@ -42,14 +42,19 @@ a.action {
 
 #header{
   margin:0;
-  padding:0;
+  padding:20px 20px 0;
   border-bottom: 3px solid #aaa;
   background-color: #ccc;
 }
 
 #header h1{
+  margin:0 0 20px;
+  padding:0;
+}
+
+#navigation{
   margin:0;
-  padding:20px;
+  padding:0;
 }
 
 #navigation li{
@@ -60,6 +65,7 @@ a.action {
   background:#fff;
   position:relative;
   top:3px;
+  margin:0;
 }
 
 #navigation li.current{
