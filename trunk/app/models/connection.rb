@@ -39,7 +39,7 @@ class Connection < ActiveRecord::Base
   def validate_tag
     if CONNECTIONS[tag]
       if CONNECTIONS[tag][source.tag].nil?
-        errors.add(:tag, "\"#{tag}\" cannot have a #{source.tag} as a source")
+        errors.add(:source_id, "\"#{tag}\" cannot have a #{source.tag} as a source")
       else
         errors.add(:tag, "\"#{tag}\" cannot be between #{source.tag} and #{target.tag}") unless CONNECTIONS[tag][source.tag].include?(target.tag)
       end
