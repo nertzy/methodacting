@@ -16,5 +16,45 @@
     <id type="integer">4</id>
     <name>H.R. 5647</name>
   </actor>
+  <actor>
+    <id type="integer">5</id>
+    <name>H.R.5647: $3,000,000 FL</name>
+  </actor>  
+  <actor>
+    <id type="integer">6</id>
+    <name>H.R.5647: $3,000,000 NY</name>
+  </actor>  
+  <actor>
+    <id type="integer">7</id>
+    <name>H.R.5647: $2,300,000 TX</name>
+  </actor>  
+  <actor>
+    <id type="integer">8</id>
+    <name>H.R.5647: $1,750,000 OH</name>
+  </actor>  
+  <actor>
+    <id type="integer">9</id>
+    <name>H.R.5647: $1,500,000 TX</name>
+  </actor>  
+  <actor>
+    <id type="integer">10</id>
+    <name>H.R.5647: $1,500,000 CA</name>
+  </actor>
+  <actor>
+    <id type="integer">11</id>
+    <name>H.R.5647: $1,500,000 CA</name>
+  </actor>
+  <actor>
+    <id type="integer">12</id>
+    <name>H.R.5647: $1,300,000 TN</name>
+  </actor>
+  <actor>
+    <id type="integer">13</id>
+    <name>H.R.5647: $1,250,000 NC</name>
+  </actor>
+  <actor>
+    <id type="integer">14</id>
+    <name>H.R.5647: $1,200,000 TX</name>
+  </actor>
 </actors>
 
