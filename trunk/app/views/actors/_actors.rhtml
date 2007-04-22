@@ -15,8 +15,8 @@
         <td><%= actor.has_creator? ? link_to(h(actor.creator.name), user_path(actor.creator)) : '&nbsp;' %></td>
       <% end -%>
       <td><%=h actor.active? %></td>
-      <td><%= link_to '(edit)', edit_actor_path(actor) %></td>
-      <td><%= link_to '(destroy)', actor_path(actor), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to '(edit)', edit_actor_path(actor), :class => 'action' %></td>
+      <td><%= link_to '(destroy)', actor_path(actor), :class => 'action', :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end -%>
 </table>

@@ -4,8 +4,8 @@
   <% for user in @users %>
     <li>
       <%= link_to h(user.name), user_path(user) %>
-      <%= link_to '(edit)', edit_user_path(user) %>
-      <%= link_to '(destroy)', user_path(user), :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to '(edit)', edit_user_path(user), :class => 'action' %>
+      <%= link_to '(destroy)', user_path(user), :class => 'action', :confirm => 'Are you sure?', :method => :delete %>
     </li>
   <% end %>
 </ul>
