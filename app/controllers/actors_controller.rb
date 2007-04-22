@@ -7,7 +7,7 @@ class ActorsController < ApplicationController
 
     respond_to do |format|
       format.html # index.rhtml
-      format.xml  { render :xml => @actors.to_xml(XML_OPTIONS) }
+      format.xml  { render :xml => @actors.to_xml }
     end
   end
 
@@ -18,7 +18,7 @@ class ActorsController < ApplicationController
 
     respond_to do |format|
       format.html # show.rhtml
-      format.xml  { render :xml => @actor.to_xml(XML_OPTIONS) }
+      format.xml  { render :xml => @actor.to_xml }
     end
   end
 

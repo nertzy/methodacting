@@ -8,7 +8,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       format.html # index.rhtml
-      format.xml  { render :xml => @connections.to_xml(XML_OPTIONS) }
+      format.xml  { render :xml => @connections.to_xml }
     end
   end
 
@@ -19,7 +19,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       format.html # show.rhtml
-      format.xml  { render :xml => @connection.to_xml(XML_OPTIONS) }
+      format.xml  { render :xml => @connection.to_xml }
     end
   end
 
@@ -91,7 +91,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       format.html # show.rhtml
-      format.xml  { render :xml => @connection.to_xml(XML_OPTIONS) }
+      format.xml  { render :xml => @connection.to_xml }
     end
   end
   
