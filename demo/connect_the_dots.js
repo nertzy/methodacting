@@ -1,5 +1,4 @@
 var xmlHttp;
-var descXmlHttp;
 var searchActorName;
 var currentActorId = null;
 var connIdList = new Array();
@@ -251,8 +250,7 @@ function handleActorDescription()
     // Get the data from the server's response
     // example
 
-    var text = descXmlHttp.responseText;
-    alert(text);
+    var text = xmlHttp.responseText;
     if ( text.length > 0 )
     {
       document.getElementById("actorinfo").innerHTML = text;
@@ -266,12 +264,13 @@ function handleActorDescription()
 function loadActorDescription(description)
 {
   document.getElementById("actorinfo").innerHTML = "Loading...";
-  descXmlHttp = getXMLHTTPObject();
-  descXmlHttp.onreadystatechange=handleActorDescription;
+  xmlHttp = getXMLHTTPObject();
+  xmlHttp.onreadystatechange=handleActorDescription;
   url = description;
-  alert("Fetching description from " + url);
-  descXmlHttp.open("GET", url, true);
-  descXmlHttp.send(null);
+  // alert("Fetching description from " + url);
+  // document.getElementById("actorinfo").innerHTML = url;
+  xmlHttp.open("GET", url, true);
+  xmlHttp.send(null);
 }
 
 
@@ -325,8 +324,7 @@ function handleActorInfo()
     actors["actor_" + id] = actorData;
     currentActor = actorData;
 
-    alert("loading from " + description);
-    loadActorDescription(description);
+    loadActorDescription(actorData.description);
   }
 }
 
