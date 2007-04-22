@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone='yes'?>
+<actors>
+  <actor>
+    <active type="boolean">true</active>
+    <created-on type="datetime">2007-04-22T00:34:35-05:00</created-on>
+    <id type="integer">12</id>
+    <name>H.R.5647: $1,300,000 TN</name>
+    <updated-on type="datetime">2007-04-22T00:34:35-05:00</updated-on>
+    <tag>Earmark</tag>
+    <description>actor_web_home/hr_5647_E1300TN.html</description>
+  </actor>
+</actors>
