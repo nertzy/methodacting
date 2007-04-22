@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone='yes'?>
+<actors>
+  <actor>
+    <active type="boolean">true</active>
+    <created-on type="datetime">2007-04-22T00:34:35-05:00</created-on>
+    <id type="integer">15</id>
+    <name>Florida Institute of Technology</name>
+    <updated-on type="datetime">2007-04-22T00:34:35-05:00</updated-on>
+    <tag>University</tag>
+    <description>actor_web_home/fit.html</description>
+  </actor>
+</actors>
