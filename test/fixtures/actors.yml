@@ -17,6 +17,7 @@ grant:
   name: Grant Hutchins
   creator_id: 1
   active: true
+  tag: Individual
   created_on: <%= 1.week.ago.to_s(:db) %>
   updated_on: <%= 1.week.ago.to_s(:db) %>
 inactive:
@@ -24,12 +25,14 @@ inactive:
   name: Inactive Actor
   creator_id: 1
   active: false
+  tag: Individual
   created_on: <%= 2.days.ago.to_s(:db) %>
   updated_on: <%= 2.days.ago.to_s(:db) %>
 no_creator:
   id: 3
   name: Actor with no Creator
   active: true
+  tag: Group
   created_on: <%= 3.days.ago.to_s(:db) %>
   updated_on: <%= 3.days.ago.to_s(:db) %>
 league:
@@ -37,6 +40,7 @@ league:
   name: League of Technical Voters
   creator_id: 6
   active: true
+  tag: Group
   created_on: <%= Time.now.to_s(:db) %>
   updated_on: <%= Time.now.to_s(:db) %>
 jason:
@@ -44,6 +48,7 @@ jason:
   name: Jason Maltzen
   creator_id: 5
   active: true
+  tag: Individual
   created_on: <%= Time.now.to_s(:db) %>
   updated_on: <%= Time.now.to_s(:db) %>
 silona:
@@ -51,6 +56,7 @@ silona:
   name: Silona Bonewald
   creator_id: 6
   active: true
+  tag: Individual
   created_on: <%= Time.now.to_s(:db) %>
   updated_on: <%= Time.now.to_s(:db) %>
 

@@ -10,7 +10,7 @@ ActiveRecord::Schema.define(:version => 5) do
     t.column "updated_on", :datetime
     t.column "active",     :boolean
     t.column "creator_id", :integer
-    t.column "type",       :string
+    t.column "tag",        :string
   end
 
   create_table "connections", :force => true do |t|
