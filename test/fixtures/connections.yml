@@ -1,0 +1,35 @@
+# == Schema Information
+# Schema version: 4
+#
+# Table name: connections
+#
+#  id          :integer(11)   not null, primary key
+#  source_id   :integer(11)   
+#  target_id   :integer(11)   
+#  creator_id  :integer(11)   
+#  tag         :string(255)   
+#  description :string(255)   
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+grant_member_league:
+  id: 1
+  source_id: 1
+  target_id: 4
+  creator_id: 1
+  tag: Member
+  description: Grant is in the League of Technical Voters
+grant_friend_jason:
+  id: 2
+  source_id: 1
+  target_id: 5
+  creator_id: 1
+  tag: Friend
+  description: Grant thinks of Jason as a friend
+jason_friend_grant:
+  id: 3
+  source_id: 5
+  target_id: 1
+  creator_id: 5
+  tag: Friend
+  description: Jason thinks of Grant as a friend
