@@ -6,6 +6,8 @@
     <id type="integer">4</id>
     <name>H.R. 5647</name>
     <updated-on type="datetime">2007-04-22T08:44:35-05:00</updated-on>
+    <tag>Bill</tag>
+    <description>actor_web_home/analysis_hr5647.html</description>
   </actor>
 </actors>
 

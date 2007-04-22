@@ -6,6 +6,8 @@
     <id type="integer">3</id>
     <name>League of Technical Voters</name>
     <updated-on type="datetime">2007-04-15T00:44:35-05:00</updated-on>
+    <tag>Group</tag>
+    <description>actor_web_home/lotv.html</description>
   </actor>
 </actors>
 

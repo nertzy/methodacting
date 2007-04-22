@@ -1,4 +1,5 @@
 var xmlHttp;
+var descXmlHttp;
 var searchActorName;
 var currentActorId = null;
 var connIdList = new Array();
@@ -227,14 +228,50 @@ function appendToSelect(select, name, value)
 }
 
 
-function updateActorInfoPane(name, created, updated)
+function updateActorInfoPane(name, description, tag, created, updated)
 {
   document.title = name;
-  docStr = "Name: " + name + "<BR />\n";
-  docStr = docStr + "Created: " + created + "<BR />\n";
-  docStr = docStr + "Updated: " + updated + "<BR />\n";
-  document.getElementById("actorinfo").innerHTML = docStr;
+  // docStr = "Name: " + name + "<BR />\n";
+  // docStr = docStr + "Created: " + created + "<BR />\n";
+  // docStr = docStr + "Updated: " + updated + "<BR />\n";
   document.getElementById("actorname").innerHTML = name;
+}
+
+
+function updateActorDescription(description)
+{
+  document.getElementById("actorinfo").innerHTML = description;
+}
+
+
+function handleActorDescription()
+{
+  if (xmlHttp.readyState==4)
+  {
+    // Get the data from the server's response
+    // example
+
+    var text = descXmlHttp.responseText;
+    alert(text);
+    if ( text.length > 0 )
+    {
+      document.getElementById("actorinfo").innerHTML = text;
+    }
+    getActorOutConnections(currentActorId);
+  }
+}
+
+
+
+function loadActorDescription(description)
+{
+  document.getElementById("actorinfo").innerHTML = "Loading...";
+  descXmlHttp = getXMLHTTPObject();
+  descXmlHttp.onreadystatechange=handleActorDescription;
+  url = description;
+  alert("Fetching description from " + url);
+  descXmlHttp.open("GET", url, true);
+  descXmlHttp.send(null);
 }
 
 
@@ -269,21 +306,27 @@ function handleActorInfo()
   {
     // Get the data from the server's response
     // example
-    xmlDoc = xmlHttp.responseXML.documentElement;
-    name = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
-    id = xmlDoc.getElementsByTagName("id")[0].childNodes[0].nodeValue;
-    created = xmlDoc.getElementsByTagName("created-on")[0].childNodes[0].nodeValue;
-    updated = xmlDoc.getElementsByTagName("updated-on")[0].childNodes[0].nodeValue;
-    updateActorInfoPane(name, created, updated);
+    var xmlDoc = xmlHttp.responseXML.documentElement;
+    var name = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+    var id = xmlDoc.getElementsByTagName("id")[0].childNodes[0].nodeValue;
+    var created = xmlDoc.getElementsByTagName("created-on")[0].childNodes[0].nodeValue;
+    var updated = xmlDoc.getElementsByTagName("updated-on")[0].childNodes[0].nodeValue;
+    var description = xmlDoc.getElementsByTagName("description")[0].childNodes[0].nodeValue;
+    var tag = xmlDoc.getElementsByTagName("tag")[0].childNodes[0].nodeValue;
+    updateActorInfoPane(name, description, tag, created, updated);
 
     var actorData = new Object();
     actorData.name = name;
+    actorData.description = description;
+    actorData.tag = tag;
     actorData.created = created;
     actorData.updated = updated;
 
     actors["actor_" + id] = actorData;
+    currentActor = actorData;
 
-    getActorOutConnections(currentActorId);
+    alert("loading from " + description);
+    loadActorDescription(description);
   }
 }
 
