@@ -250,7 +250,7 @@ function handleSearchActorList()
     for ( i = 0; i < actorList.length; i++ )
     {
       actorName = actorList[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-      if ( actorName == searchActorName )
+      if ( actorName.toLowerCase() == searchActorName.toLowerCase() )
       {
         actorId = actorList[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
         currentActorId = actorId;
@@ -258,6 +258,7 @@ function handleSearchActorList()
         return;
       }
     }
+    alert("No search results found matching \'" + searchActorName + "\'.");
     document.getElementById("actordetails").innerHTML = "";
   }
 }
