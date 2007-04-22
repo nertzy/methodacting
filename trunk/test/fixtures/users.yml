@@ -42,4 +42,8 @@ silona:
   name: Silona Bonewald
   hashed_password: MyString
   salt: MyString
-  
+greg:
+  id: 7
+  name: Gregory Foster
+  hashed_password: MyString
+  salt: MyString
