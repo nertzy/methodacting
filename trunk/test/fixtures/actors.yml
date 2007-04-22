@@ -55,6 +55,7 @@ time_exchange:
 greg:
   id: 8
   name: Gregory Foster
+  creator_id: 7
   tag: Individual
   created_on: <%= 1.day.ago.to_s(:db) %>
   updated_on: <%= 1.day.ago.to_s(:db) %>
