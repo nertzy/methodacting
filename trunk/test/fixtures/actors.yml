@@ -1,12 +1,12 @@
 # == Schema Information
-# Schema version: 3
+# Schema version: 4
 #
 # Table name: actors
 #
 #  id         :integer(11)   not null, primary key
 #  name       :string(255)   
-#  created_on :date          
-#  updated_on :date          
+#  created_on :datetime      
+#  updated_on :datetime      
 #  active     :boolean(1)    
 #  creator_id :integer(11)   
 #
@@ -35,6 +35,13 @@ no_creator:
 league:
   id: 4
   name: League of Technical Voters
+  creator_id: 6
+  active: true
+  created_on: <%= Time.now.to_s(:db) %>
+  updated_on: <%= Time.now.to_s(:db) %>
+jason:
+  id: 5
+  name: Jason Maltzen
   creator_id: 6
   active: true
   created_on: <%= Time.now.to_s(:db) %>

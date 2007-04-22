@@ -1,4 +1,4 @@
-<h1><%=h @actor.name %> (<%=h @actor.class %>)</h1>
+<h2><%=h @actor.name %> (<%=h @actor.class %>)</h2>
 
 <p>Created <%= distance_of_time_in_words_to_now @actor.created_on %> ago<%= " by #{link_to h(@actor.creator.name), user_path(@actor.creator)}" if @actor.creator %>.</p>
 
@@ -10,6 +10,12 @@
   <%= @actor.active? ? 'Active' : 'Inactive' %>
 </p>
 
+<h2>Connections</h2>
+<ul>
+  <% @actor.connections.each do |connection| %>
+    <li><%= connection_to_sentence(connection) %></li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_actor_path(@actor) %> |
 <%= link_to 'Back', actors_path %>
