@@ -16,6 +16,7 @@
     <li><%= connection_to_sentence(connection) %></li>
   <% end %>
 </ul>
+<p><%= link_to "New outgoing connection", new_connection_path(:source_id => @actor) %></p>
 
 <%= link_to 'Edit', edit_actor_path(@actor) %> |
 <%= link_to 'Back', actors_path %>

@@ -3,8 +3,21 @@ require File.dirname(__FILE__) + '/../test_helper'
 class ConnectionTest < Test::Unit::TestCase
   fixtures :connections
 
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  def test_presence_of_tag
+    @connection = Connection.new(
+      :source_id => 1,
+      :tag => '',
+      :target_id => 2
+    )
+    assert !@connection.valid?
   end
+
+  def test_uniqueness
+    @connection = Connection.new
+    @connection.source_id = connections(:grant_friend_jason).source_id
+    @connection.target_id = connections(:grant_friend_jason).target_id
+    @connection.tag = connections(:grant_friend_jason).tag
+    assert !@connection.valid?
+  end
+
 end
