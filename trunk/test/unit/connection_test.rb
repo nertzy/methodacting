@@ -20,7 +20,7 @@ class ConnectionTest < Test::Unit::TestCase
     assert !connection.valid?
   end
 
-  def test_tag
+  def test_tag_in_list
     connection = Connection.new(
       :source_id => 1,
       :target_id => 2,
