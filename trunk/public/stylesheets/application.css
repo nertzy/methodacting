@@ -77,6 +77,12 @@ a.action {
   padding:10px 20px 20px 20px;
 }
 
+p.notice{
+  border:1px solid #ff0;
+  background:#ffe;
+  padding:5px;
+}
+
 .fieldWithErrors {
   padding: 2px;
   background-color: red;
