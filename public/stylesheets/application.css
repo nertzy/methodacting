@@ -1,6 +1,10 @@
-body { background-color: #fff; color: #333; }
+body {
+  background-color: #fff; 
+  color: #333; 
+  margin:0;
+  padding:0;
+}
 
-body.users{ background-color: #ccc;}
 
 body, p, ol, ul, td {
   font-family: "Helvetica Neue", arial, helvetica, sans-serif;
@@ -19,12 +23,48 @@ td, th{
   padding:3px;
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Gill Sans', 'Trebuchet MS' sans-serif;
+  margin:0;
+}
+
 a {  }
 a:visited {  }
 a:hover { }
 
 a.action {
   font-size:80%;
+}
+
+#header{
+  margin:0;
+  padding:0;
+  border-bottom: 3px solid #aaa;
+  background-color: #ccc;
+}
+
+#header h1{
+  margin:0;
+  padding:20px;
+}
+
+#navigation li{
+  list-style:none;
+  border:1px solid #888;
+  float:left;
+  padding:5px;
+  background:#fff;
+  position:relative;
+  top:3px;
+}
+
+#navigation li.current{
+  border-bottom:1px solid #fff;
+  font-weight:bold;
+}
+
+#content{
+  padding:10px 20px 20px 20px;
 }
 
 .fieldWithErrors {
@@ -83,3 +123,6 @@ div.progressBar div.background {
   width: 0%;
 }
 
+div.clearfix{
+  clear:both;
+}
