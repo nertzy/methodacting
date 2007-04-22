@@ -5,6 +5,7 @@ Definitions of the data structures for objects in the social networking system
 Actor:
  * ID
  * Name
+ * Description
  * Active Flag
  * Creating User
 
