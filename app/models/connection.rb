@@ -22,6 +22,9 @@ class Connection < ActiveRecord::Base
     },
     'Leader' => {
       'Individual' => %w{Group}
+    },
+    'Supporter' => {
+      'Individual' => %w{Individual Group}
     }
   }
   
