@@ -1,11 +1,11 @@
 <h2><%=h @user.name %> (User)</h2>
 
 <h3>Actors created by <%=h @user.name %></h3>
-<ul>
-  <% @user.actors.each do |actor| -%>
-    <li><%= link_to h(actor.name), actor_path(actor) %></li>
-  <% end -%>
-</ul>
+<%= render :partial => 'actors/actors', :object => @user.actors, :locals => {:hide_creators => true} %>
+<p><%= link_to 'Add a new actor', new_actor_path(:creator_id => @user) %></p>
+
+<h3>Connections created by <%=h @user.name %></h3>
+<%= render :partial => 'connections/connections', :object => @user.connections %>
 <p><%= link_to 'Add a new actor', new_actor_path(:creator_id => @user) %></p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
