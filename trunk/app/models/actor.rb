@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 4
+# Schema version: 5
 #
 # Table name: actors
 #
@@ -9,6 +9,7 @@
 #  updated_on :datetime      
 #  active     :boolean(1)    
 #  creator_id :integer(11)   
+#  tag        :string(255)   
 #
 
 class Actor < ActiveRecord::Base
