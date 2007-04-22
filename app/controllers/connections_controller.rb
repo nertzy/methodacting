@@ -1,5 +1,5 @@
 class ConnectionsController < ApplicationController
-  XML_OPTIONS = {:except => [:source_id, :target_id], :methods => [:source_url, :target_url]}
+  XML_OPTIONS = {}
   
   # GET /connections
   # GET /connections.xml

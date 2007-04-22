@@ -1,4 +1,5 @@
 class ActorsController < ApplicationController
+  XML_OPTIONS = {}
   # GET /actors
   # GET /actors.xml
   def index
@@ -6,7 +7,7 @@ class ActorsController < ApplicationController
 
     respond_to do |format|
       format.html # index.rhtml
-      format.xml  { render :xml => @actors.to_xml(:except => [:id, :creator_id], :methods => [:url]) }
+      format.xml  { render :xml => @actors.to_xml(XML_OPTIONS) }
     end
   end
 
@@ -17,7 +18,7 @@ class ActorsController < ApplicationController
 
     respond_to do |format|
       format.html # show.rhtml
-      format.xml  { render :xml => @actor.to_xml(:except => [:creator_id]) }
+      format.xml  { render :xml => @actor.to_xml(XML_OPTIONS) }
     end
   end
 
