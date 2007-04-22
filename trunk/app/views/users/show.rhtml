@@ -1,6 +1,6 @@
-<h1><%=h @user.name %> (User)</h1>
+<h2><%=h @user.name %> (User)</h2>
 
-<h2>Actors created by <%=h @user.name %></h2>
+<h3>Actors created by <%=h @user.name %></h3>
 <ul>
   <% @user.actors.each do |actor| -%>
     <li><%= link_to h(actor.name), actor_path(actor) %></li>

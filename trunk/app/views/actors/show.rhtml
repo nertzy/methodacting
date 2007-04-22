@@ -10,7 +10,7 @@
   <%= @actor.active? ? 'Active' : 'Inactive' %>
 </p>
 
-<h2>Connections</h2>
+<h3>Connections involving <%=h @actor.name %></h3>
 <ul>
   <% @actor.connections.each do |connection| %>
     <li><%= connection_to_sentence(connection) %></li>
