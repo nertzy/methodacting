@@ -1,12 +1,12 @@
 #summary Definitions of Terminology
 
-Definitions of terminology used in Actor-based Social Entity system
+Definitions of terminology used in Actor-based Social Networking system
 
-Actor: social networking object
-Connection: a unidirectional link from a source Actor to a target Actor
-System: a site that implements/supports the social networking standard
-Source: the outbound side of a Connection
-Target: the inbound side of a Connection
-Outbound Connection: a Connection where the Actor is the Source of the Connection
-Inbound Connection: a Connection where the Actor is the Target of the Connection
-Authoritative System: the System where an Actor exists
+||Actor || An object in the social networking system ||
+||Connection ||  a unidirectional link from a source Actor to a target Actor ||
+||System || A site that implements/supports the social networking standard ||
+||Source || The outbound side of a Connection ||
+||Target || The inbound side of a Connection ||
+||Outbound Connection || A Connection where the Actor is the Source of the Connection ||
+||Inbound Connection || A Connection where the Actor is the Target of the Connection ||
+||Authoritative System || The System where an Actor exists ||
