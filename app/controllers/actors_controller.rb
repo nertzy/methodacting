@@ -6,7 +6,7 @@ class ActorsController < ApplicationController
 
     respond_to do |format|
       format.html # index.rhtml
-      format.xml  { render :xml => @actors.to_xml }
+      format.xml  { render :xml => @actors.to_xml(:except => [:creator_id]) }
     end
   end
 
@@ -17,13 +17,14 @@ class ActorsController < ApplicationController
 
     respond_to do |format|
       format.html # show.rhtml
-      format.xml  { render :xml => @actor.to_xml }
+      format.xml  { render :xml => @actor.to_xml(:except => [:creator_id]) }
     end
   end
 
   # GET /actors/new
   def new
     @actor = Actor.new
+    @actor.creator_id = params[:creator_id]
   end
 
   # GET /actors/1;edit
