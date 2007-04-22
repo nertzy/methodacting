@@ -80,4 +80,18 @@ class ConnectionsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # GET /connections/tag/:tag
+  # GET /connections/tag/:tag.xml
+  def tag
+    @tag = params[:tag]
+    @connections = Connection.find_all_by_tag(params[:tag])
+
+    respond_to do |format|
+      format.html # show.rhtml
+      format.xml  { render :xml => @connection.to_xml(:except => [:source_id, :target_id]) }
+    end
+  end
+  
+  
 end

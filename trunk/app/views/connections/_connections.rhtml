@@ -1,0 +1,9 @@
+<ul class="connections">
+  <% @connections.each do |connection| %>
+    <li>
+      <%= connection_to_sentence(connection) %>
+      <%= link_to '(edit)', edit_connection_path(connection) %>
+      <%= link_to '(destroy)', connection_path(connection), :confirm => 'Are you sure?', :method => :delete %>
+    </li>
+  <% end %>
+</ul>

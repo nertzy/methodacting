@@ -2,7 +2,7 @@
 
 <p>Source: <%= link_to h(@connection.source.name), actor_path(@connection.source)%></p>
 
-<p>Tag: <%=h @connection.tag %></p>
+<p>Tag: <%= link_to h(@connection.tag), :action => 'tag', :tag => @connection.tag %></p>
 
 <p>Target: <%= link_to h(@connection.target.name), actor_path(@connection.target)%></p>
 

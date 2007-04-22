@@ -42,8 +42,15 @@ league:
 jason:
   id: 5
   name: Jason Maltzen
+  creator_id: 5
+  active: true
+  created_on: <%= Time.now.to_s(:db) %>
+  updated_on: <%= Time.now.to_s(:db) %>
+silona:
+  id: 6
+  name: Silona Bonewald
   creator_id: 6
   active: true
   created_on: <%= Time.now.to_s(:db) %>
   updated_on: <%= Time.now.to_s(:db) %>
-  
+
