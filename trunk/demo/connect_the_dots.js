@@ -12,6 +12,16 @@ var outConnectActors = new Object();
 var inConnectActors = new Object();
 var actors = new Object();
 
+var inConnectionNames = new Object();
+inConnectionNames['Earmark'] = 'Earmark'
+inConnectionNames['Friend'] = 'Friend'
+inConnectionNames['Member'] = 'Members'
+
+var outConnectionNames = new Object();
+outConnectionNames['Earmark'] = 'Modifies'
+outConnectionNames['Friend'] = 'Friend'
+outConnectionNames['Member'] = 'Member of'
+
 
 function pageLoad()
 {
@@ -336,11 +346,18 @@ function getActorInfo(id, handler)
   url = url + "?q=" + id;
   url = "data/actors/" + id + ".xml";  // for testing
   xmlHttp.open("GET", url, true);
-  xmlHttp.send(null);
+  try
+  {
+    xmlHttp.send(null);
+  }
+  catch (e)
+  {
+    alert("Failed to load " + url);
+  }
 }
 
 
-function addTagConnectionSection(table, prefix, tag, connections)
+function addTagConnectionSection(table, prefix, tag, connections, inbound)
 {
   // IE hax
   var tbody = document.createElement("TBODY");
@@ -357,7 +374,15 @@ function addTagConnectionSection(table, prefix, tag, connections)
   img.src = "art/plus_button.jpg";
   img.alt = "Expand list";
   col.appendChild(img);
-  text = document.createTextNode(" " + tag);
+  var text;
+  if ( inbound )
+  {
+    text = document.createTextNode(" " + inConnectionNames[tag]);
+  }
+  else
+  {
+    text = document.createTextNode(" " + outConnectionNames[tag]);
+  }
   col.appendChild(text);
   row.appendChild(col);
   tbody.appendChild(row);
@@ -420,7 +445,7 @@ function populateConnectionInfo()
     }
     if ( connList.length > 0 )
     {
-      addTagConnectionSection(table, "in_", tag, connList);
+      addTagConnectionSection(table, "in_", tag, connList, true);
     }
 
     // now the outbound
@@ -441,7 +466,7 @@ function populateConnectionInfo()
     }
     if ( connList.length > 0 )
     {
-      addTagConnectionSection(table, "out_", tag, connList);
+      addTagConnectionSection(table, "out_", tag, connList, false);
     }
   }
 
@@ -590,7 +615,15 @@ function getNextConnectionInfo(connHandler, actorHandler)
     url = url + "?q=" + connId;
     url = "data/connections/" + connId + ".xml";  // for testing
     xmlHttp.open("GET", url, true);
-    xmlHttp.send(null);
+    try
+    {
+      xmlHttp.send(null);
+    }
+    catch (e)
+    {
+      alert("Failed to load " + url);
+      getNextConnectionInfo(actorHandler);
+    }
   }
   else
   {
