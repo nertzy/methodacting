@@ -34,6 +34,14 @@ class Connection < ActiveRecord::Base
   validates_inclusion_of :tag, :in => CONNECTIONS.keys, :message => "can be #{CONNECTIONS.keys.to_sentence} only"
   validate :validate_tag, :validate_source_is_not_target
   
+  def source_url
+    source.url
+  end
+  
+  def target_url
+    target.url
+  end
+  
   private
   
   def validate_tag
