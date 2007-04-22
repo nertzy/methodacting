@@ -2,6 +2,7 @@
 <table class="actors">
   <tr>
     <th>Name</th>
+    <th>Tag</th>
     <% unless hide_creators -%>
       <th>Creator</th>
     <% end -%>
@@ -11,6 +12,7 @@
   <% actors.each do |actor| -%>
     <tr>
       <td><%= link_to h(actor.name), actor_path(actor) %></td>
+      <td><%=h actor.tag %></td>
       <% unless hide_creators -%>
         <td><%= actor.has_creator? ? link_to(h(actor.creator.name), user_path(actor.creator)) : '&nbsp;' %></td>
       <% end -%>

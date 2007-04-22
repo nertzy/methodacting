@@ -38,4 +38,13 @@ class ConnectionTest < Test::Unit::TestCase
     assert !connection.valid?
   end
 
+  def test_group_cannot_be_member_of_individual
+    connection = Connection.new(
+      :source_id => 4,
+      :target_id => 1,
+      :tag => 'Member'
+    )
+    assert !connection.valid?
+  end
+  
 end

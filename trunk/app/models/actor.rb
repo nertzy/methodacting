@@ -12,12 +12,16 @@
 #
 
 class Actor < ActiveRecord::Base
+  TAGS = %w{Individual Group}
   belongs_to :creator, :class_name => 'User', :foreign_key => 'creator_id'
   has_many :inbound_connections, :class_name => 'Connection', :foreign_key => 'target_id'
   has_many :outbound_connections, :class_name => 'Connection', :foreign_key => 'source_id'
   validates_presence_of :name
+  validates_presence_of :tag
+  validates_inclusion_of :tag, :in => TAGS
 
   def connections
     self.inbound_connections + self.outbound_connections
   end
+  
 end

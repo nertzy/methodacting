@@ -9,6 +9,10 @@
     <label for="actor_creator">Creator</label>
     <%= f.select :creator_id, [nil] + User.find(:all).collect {|u| [u.name, u.id] } %>
     <br />
+
+    <label for="actor_tag">Tag</label>
+    <%= f.select :tag, Actor::TAGS %>
+    <br />
     
     <label for="actor_active">Active?</label>
     <%= f.check_box :active %>

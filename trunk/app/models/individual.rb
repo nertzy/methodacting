@@ -1,2 +1,0 @@
-class Individual < Actor
-end
