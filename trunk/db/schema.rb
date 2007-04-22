@@ -6,8 +6,8 @@ ActiveRecord::Schema.define(:version => 3) do
 
   create_table "actors", :force => true do |t|
     t.column "name",       :string
-    t.column "created_on", :date
-    t.column "updated_on", :date
+    t.column "created_on", :datetime
+    t.column "updated_on", :datetime
     t.column "active",     :boolean
     t.column "creator_id", :integer
   end
@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(:version => 3) do
     t.column "name",            :string
     t.column "hashed_password", :string
     t.column "salt",            :string
+    t.column "created_on",      :datetime
+    t.column "updated_on",      :datetime
   end
 
 end
