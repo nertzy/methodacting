@@ -17,12 +17,26 @@ grant:
   name: Grant Hutchins
   creator_id: 1
   active: true
+  created_on: <%= 1.week.ago.to_s(:db) %>
+  updated_on: <%= 1.week.ago.to_s(:db) %>
 inactive:
   id: 2
-  name: MyString
+  name: Inactive Actor
   creator_id: 1
   active: false
+  created_on: <%= 2.days.ago.to_s(:db) %>
+  updated_on: <%= 2.days.ago.to_s(:db) %>
 no_creator:
   id: 3
   name: Actor with no Creator
   active: true
+  created_on: <%= 3.days.ago.to_s(:db) %>
+  updated_on: <%= 3.days.ago.to_s(:db) %>
+league:
+  id: 4
+  name: League of Technical Voters
+  creator_id: 6
+  active: true
+  created_on: <%= Time.now.to_s(:db) %>
+  updated_on: <%= Time.now.to_s(:db) %>
+  
