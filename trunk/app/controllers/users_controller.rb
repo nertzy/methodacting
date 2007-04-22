@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html # index.rhtml
-      format.xml  { render :xml => @users.to_xml }
+      format.xml  { render :xml => @users.to_xml(:except => [:hashed_password, :salt]) }
     end
   end
 
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html # show.rhtml
-      format.xml  { render :xml => @user.to_xml }
+      format.xml  { render :xml => @user.to_xml(:except => [:hashed_password, :salt]) }
     end
   end
 
