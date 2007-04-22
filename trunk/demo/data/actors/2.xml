@@ -6,6 +6,8 @@
     <id type="integer">2</id>
     <name>Jason Maltzen</name>
     <updated-on type="datetime">2007-04-15T00:44:35-05:00</updated-on>
+    <tag>Individual</tag>
+    <description>actor_web_home/jason.html</description>
   </actor>
 </actors>
 
