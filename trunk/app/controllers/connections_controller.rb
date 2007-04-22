@@ -89,7 +89,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       format.html # show.rhtml
-      format.xml  { render :xml => @connection.to_xml(:except => [:source_id, :target_id]) }
+      format.xml  { render :xml => @connection.to_xml }
     end
   end
   
