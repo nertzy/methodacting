@@ -47,3 +47,9 @@ jason_member_league:
   creator_id: 1
   tag: Member
   description: Jason is in the League of Technical Voters
+greg_leader_exchange:
+  id: 6
+  source_id: 8
+  target_id: 7
+  tag: Leader
+  description: Gregory Foster is the leader of the Austin Time Exchange Network
