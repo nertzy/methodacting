@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<connections>
+  <connection>
+    <id type="integer">3</id>
+    <creator-id type="integer">2</creator-id>
+    <tag>Friend</tag>
+    <source>2</source>
+    <target>1</target>
+    <description></description>
+  </connection>
+</connections>
+
