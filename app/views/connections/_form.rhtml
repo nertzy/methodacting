@@ -1,0 +1,17 @@
+<%= error_messages_for :connection %>
+
+<% form_for(:connection, :url => @connection.new_record? ? connections_path : connection_path(@connection), :html => { :method => @connection.new_record? ? :post : :put }) do |f| %>
+  <p>
+    <%= f.select :source_id, Actor.find(:all).collect { |a| [a.name, a.id] } %>
+    is a 
+    <%= f.text_field :tag %>
+    of 
+    <%= f.select :target_id, Actor.find(:all).collect { |a| [a.name, a.id] }%>.
+  </p>
+  
+  <p>Created by <%= f.select :creator_id, User.find(:all).collect { |u| [u.name, u.id] }%>
+
+  <p>
+    <%= submit_tag @connection.new_record? ? "Create" : 'Update' %>
+  </p>
+<% end -%>
