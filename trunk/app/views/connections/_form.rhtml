@@ -9,6 +9,9 @@
     <%= f.select :target_id, Actor.find(:all).collect { |a| [a.name, a.id] }%>.
   </p>
   
+  <h3>Description</h3>
+  <p><%= f.text_area :description, :rows => 5, :cols => 78 %></p>
+  
   <p>Created by <%= f.select :creator_id, User.find(:all).collect { |u| [u.name, u.id] }%>
 
   <p>
