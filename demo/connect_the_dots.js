@@ -195,7 +195,6 @@ function searchActor()
   url = "foo.py";
   url = url + "?q=" + request;
   url = request + ".xml";  // for testing
-  alert(url)
   xmlHttp.open("GET", url, true);
   xmlHttp.send(null);
 }
@@ -251,7 +250,6 @@ function handleSearchActorList()
     for ( i = 0; i < actorList.length; i++ )
     {
       actorName = actorList[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-      alarm("check " + actorName + " against " + searchActorName);
       if ( actorName == searchActorName )
       {
         actorId = actorList[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
