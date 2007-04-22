@@ -56,5 +56,9 @@
     <id type="integer">14</id>
     <name>H.R.5647: $1,200,000 TX</name>
   </actor>
+  <actor>
+    <id type="integer">15</id>
+    <name>Florida Institute of Technology</name>
+  </actor>
 </actors>
 
