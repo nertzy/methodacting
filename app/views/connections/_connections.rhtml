@@ -1,5 +1,5 @@
 <ul class="connections">
-  <% @connections.each do |connection| %>
+  <% connections.each do |connection| %>
     <li>
       <%= connection_to_sentence(connection) %>
       <%= link_to '(edit)', edit_connection_path(connection) %>

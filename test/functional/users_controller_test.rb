@@ -35,6 +35,7 @@ class UsersControllerTest < Test::Unit::TestCase
   def test_should_show_user
     get :show, :id => 1
     assert_response :success
+    assert_select 'table.actors th', :text => /Creator/, :count => 0
   end
 
   def test_should_get_edit
