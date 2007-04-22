@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone='yes'?>
+<actors>
+  <actor>
+    <id type="integer">1</id>
+    <name>Grant Hutchins</name>
+  </actor>
+  <actor>
+    <id type="integer">2</id>
+    <name>Jason Maltzen</name>
+  </actor>
+  <actor>
+    <id type="integer">3</id>
+    <name>League of Technical Voters</name>
+  </actor>
+  <actor>
+    <id type="integer">4</id>
+    <name>H.R. 5647</name>
+  </actor>
+</actors>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone='yes'?>
+<actors>
+  <actor>
+    <active type="boolean">true</active>
+    <created-on type="datetime">2007-04-22T08:44:35-05:00</created-on>
+    <id type="integer">4</id>
+    <name>H.R. 5647</name>
+    <updated-on type="datetime">2007-04-22T08:44:35-05:00</updated-on>
+  </actor>
+</actors>
+
