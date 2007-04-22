@@ -16,11 +16,13 @@ var inConnectionNames = new Object();
 inConnectionNames['Earmark'] = 'Earmark'
 inConnectionNames['Friend'] = 'Friend'
 inConnectionNames['Member'] = 'Members'
+inConnectionNames['Beneficiary'] = 'Benefits from'
 
 var outConnectionNames = new Object();
 outConnectionNames['Earmark'] = 'Modifies'
 outConnectionNames['Friend'] = 'Friend'
 outConnectionNames['Member'] = 'Member of'
+outConnectionNames['Beneficiary'] = 'Beneficiary'
 
 
 function pageLoad()
